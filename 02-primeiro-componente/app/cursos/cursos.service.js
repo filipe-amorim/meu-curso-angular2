@@ -1,0 +1,42 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var core_1 = require('@angular/core'); // Decorator: Injectable do @angula/core
+// Responsável: Por importar a classe
+var CursosService = (function () {
+    function CursosService() {
+    }
+    CursosService.prototype.getCursos = function () {
+        return ['Angular 2', 'Java', 'Ext JS', 'Estrutura de Dados'];
+    };
+    CursosService = __decorate([
+        // Decorator: Injectable do @angula/core
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [])
+    ], CursosService);
+    return CursosService;
+}());
+exports.CursosService = CursosService;
+/*-----------------------------------------------------------------
+    Classe do tipo Servico é a comunicaçao do frontend com backend
+-----------------------------------------------------------------*/
+/*---------------------------
+    Repare na convensao de nome
+nome do arquivo: app/cursos cursos.service.ts
+class: CursosService
+----------------------------*/
+/*-------------------------------------
+    Primero: Cria o serviço
+    Segundo: Importa o serviço no cursos.component.ts
+    Terceiro: atributo local a ser populado (colocar em baixo do export class)
+    Quarto:   Injeção de dependencia (instânciamento automático na memória)
+    Quinto: Chamada do método de serviço
+---------------------------------------*/ 
+//# sourceMappingURL=cursos.service.js.map

@@ -9,29 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core'); //Como a class vai ser um component é necessário que importamos o decorator do pacote core do angular
+var cursos_service_1 = require('./cursos.service'); // Import da classe de serviço
 var CursosComponent = (function () {
-    function CursosComponent() {
-        //interpolação
-        this.nomePortal = 'Filipe.training'; //conteúdo da var nome
-        //array para cursos
-        this.cursos = ['Angular2', 'Java', 'Ext JS']; //cursos do portal
+    // Atributo local da classe
+    function CursosComponent(cursosService) {
+        // constructor(var : tipo(CursosService))
+        this.nomePortal = 'Filipe.training'; // conteúdo da var nome
+        this.cursos = cursosService.getCursos(); // Chamada do método de Serviço
+        // Fazendo referencia a var local, nosso atributo local da classe
     }
     CursosComponent = __decorate([
-        //Como a class vai ser um component é necessário que importamos o decorator do pacote core do angular
+        // Import da classe de serviço
         core_1.Component({
             moduleId: module.id,
+            // Quem vai fazer a atribuiçao do módulo é próprio System.JS*/
             selector: 'cursos-lista',
-            /*template: `<h3> {{ nomePortal }} </h3>
+            /*------------------------------------
+            template: `<h3> {{ nomePortal }} </h3>
             <ul>
                 <li *ngFor="let curso of cursos">
                     {{ curso }}
                 </li>
             </ul>
-            `*/
-            templateUrl: 'cursos.component.html' /*Para nao precisar colocar todo o código do template
-            no decorator pode ser criado um novo arq. em html para fazer a funçao de template*/
+            -------------------------------------*/
+            templateUrl: 'cursos.component.html',
+            providers: [cursos_service_1.CursosService] // Precisamos informar ao Angular 2 que queremos que injete a classe CursosService nesse componete 
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [cursos_service_1.CursosService])
     ], CursosComponent);
     return CursosComponent;
 }());
