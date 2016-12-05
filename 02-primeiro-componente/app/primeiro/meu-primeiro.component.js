@@ -21,5 +21,5 @@ var MyFristComponent = (function () {
     ], MyFristComponent);
     return MyFristComponent;
 }());
-exports.MyFristComponent = MyFristComponent;
+exports.MyFristComponent = MyFristComponent; // É necessário exportar a class para que possa ser usado em outro lugar
 //# sourceMappingURL=meu-primeiro.component.js.map

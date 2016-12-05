@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     template: '<h2> Meu primeiro componente Angular 2 </h2>'
 
 })
-export class MyFristComponent {}
+export class MyFristComponent {} // É necessário exportar a class para que possa ser usado em outro lugar

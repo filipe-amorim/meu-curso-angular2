@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { MyFristComponent } from './primeiro/meu-primeiro.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 @Component({
     selector: 'my-app',
@@ -8,7 +9,8 @@ import { MyFristComponent } from './primeiro/meu-primeiro.component';
         <h1>Angular 2 Boilerplate</h1>
         <p>Hello World!</p>
         <meu-primeiro-componente></meu-primeiro-componente>
+        <cursos-lista>
     `,
-    directives: [ MyFristComponent ]
+    directives: [ MyFristComponent, CursosComponent ]
 })
 export class AppComponent { }
