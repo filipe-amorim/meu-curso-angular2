@@ -16,8 +16,7 @@ var CursosComponent = (function () {
         // constructor(var : tipo(CursosService))
         this.nomePortal = 'Filipe.training'; // conteúdo da var nome
         this.cursos = cursosService.getCursos(); // Chamada do método de Serviço
-        // Fazendo referencia a var local, nosso atributo local da classe
-    }
+    } // Fazendo referencia a var local, nosso atributo local da classe                           
     CursosComponent = __decorate([
         // Import da classe de serviço
         core_1.Component({

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';     // Decorator: Injectable do @ang
                                                 // Objetivo: Injetar a classe dentro do construtor(){}
 export class CursosService {
     getCursos(){
-        return ['Angular 2', 'Java', 'Ext JS','Estrutura de Dados']
+        return ['Angular 2', 'Java', 'Ext JS','Estrutura de Dados'];
     }
 }
 
